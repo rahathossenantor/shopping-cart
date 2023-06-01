@@ -21,11 +21,11 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="number" disabled class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick="handlePhone(false)" id="phone-minus-btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="phone-quantity" type="number" disabled class="form-control text-center" value="1">
+                           <button onclick="handlePhone(true)" id="phone-plus-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
+                        <h5>$<span id="phone-price">1219</span></h5>
                         <img src="./images/remove.png" alt="remove-sign" class="remove-item">
                      </div>
                   </div>
@@ -39,9 +39,9 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button id="case-minus-btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input id="case-quatity" disabled type="number" class="form-control text-center" value="1">
-                           <button id="case-plus-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick="handleCase(false)" id="case-minus-btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="case-quantity" disabled type="number" class="form-control text-center" value="1">
+                           <button onclick="handleCase(true)" id="case-plus-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <h5>$<span id="case-price">59</span></h5>
                         <img src="./images/remove.png" alt="remove-sign" class="remove-item">
