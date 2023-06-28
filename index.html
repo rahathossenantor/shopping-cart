@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+   <link rel="shortcut icon" href="./images/cart.png" type="image/x-icon">
    <link href="./style.css" rel="stylesheet">
 </head>
 <body>
@@ -21,9 +22,9 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button onclick="handlePhone(false)" id="phone-minus-btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button onclick='handleProduct("phone", false)' id="phone-minus-btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
                            <input id="phone-quantity" type="number" disabled class="form-control text-center" value="1">
-                           <button onclick="handlePhone(true)" id="phone-plus-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick='handleProduct("phone", true)' id="phone-plus-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <h5>$<span id="phone-price">1219</span></h5>
                         <img src="./images/remove.png" alt="remove-sign" class="remove-item">
@@ -39,9 +40,9 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button onclick="handleCase(false)" id="case-minus-btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button onclick='handleProduct("case", false)' id="case-minus-btn" class="btn btn-default"><i class="fas fa-minus"></i></button>
                            <input id="case-quantity" disabled type="number" class="form-control text-center" value="1">
-                           <button onclick="handleCase(true)" id="case-plus-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button onclick='handleProduct("case", true)' id="case-plus-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
                         <h5>$<span id="case-price">59</span></h5>
                         <img src="./images/remove.png" alt="remove-sign" class="remove-item">
@@ -49,21 +50,21 @@
                   </div>
                </div>
                <div class="cart-item">
-                  <div class="row">
-                     <div class="col-md-6 col-6 col-sm-6">
+                  <div class="row d-flex justify-content-between">
+                     <div class="">
                         <h5>Subtotal: </h5>
                         <h5>Tax:</h5>
-                        <h5>Total:</h5>
+                        <h5>Grand Total:</h5>
                      </div>
-                     <div class="col-md-6 col-sm-6 col-6 status">
-                        <h5>$1278</h5>
-                        <h5>$0</h5>
-                        <h5>$1278</h5>
+                     <div class="status">
+                        <h5>$<span id="subtotal">1278</span></h5>
+                        <h5>$<span id="tax">128</span></h5>
+                        <h5>$<span id="grand-total">1406</span></h5>
                      </div>
                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
+                  <button type="button" onclick='alert("Thank you for purchasing.")' class="btn btn-success check-out">Check Out</button>
                </div>
             </div>
          </div>
